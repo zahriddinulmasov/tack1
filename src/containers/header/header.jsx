@@ -1,3 +1,8 @@
+import { useTranslation } from "react-i18next";
+
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+
 import { NavItem } from "../../components/navItem/navItem";
 import { NavList } from "../../components/navList/navList";
 
@@ -12,25 +17,28 @@ import {
   StyledBadge,
 } from "./header.styled";
 
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import PermIdentityIcon from "@mui/icons-material/PermIdentity";
-
 export const Header = () => {
+  const { t, i18n } = useTranslation();
+
+  const chooseLanguages = (evt) => {
+    i18n.changeLanguage(evt.target.textContent);
+  };
+
   return (
     <HeaderWrapper>
       <HeaderLeft>
-        <Languages>EN</Languages>
+        <Languages onClick={chooseLanguages}>EN</Languages>
         <LineBetweenLanguage />
-        <Languages>RU</Languages>
+        <Languages onClick={chooseLanguages}>RU</Languages>
       </HeaderLeft>
 
       <NavList>
-        <NavItem to="/" title="Модели" />
-        <NavItem to="/company" title="О компании" />
-        <NavItem to="/main" title="Главная" />
-        <NavItem to="/contacts" title="Контакты" />
-        <NavItem to="/help-support" title="Помощь и поддрежка" />
-        <NavItem to="/3droom" title="3D Комната" />
+        <NavItem to="/" title={t("nav.models")} />
+        <NavItem to="/company" title={t("nav.company")} />
+        <NavItem to="/main" title={t("nav.main")} />
+        <NavItem to="/contacts" title={t("nav.contact")} />
+        <NavItem to="/help-support" title={t("nav.helpSupport")} />
+        <NavItem to="/3droom" title={t("nav.room")} />
       </NavList>
 
       <HeaderRight>

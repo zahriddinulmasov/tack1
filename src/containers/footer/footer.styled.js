@@ -10,7 +10,7 @@ export const FooterWrapper = styled.div`
 export const FooterList = styled.div`
   display: flex;
   justify-content: space-between;
-  max-width: 360px;
+  max-width: 460px;
   width: 100%;
 `;
 
@@ -20,5 +20,6 @@ export const FooterItem = styled.a`
   line-height: 18px;
   letter-spacing: 0.09em;
   color: #ffffff;
+  text-decoration: none;
   cursor: pointer;
 `;

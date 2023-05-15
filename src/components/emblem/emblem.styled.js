@@ -3,8 +3,11 @@ import styled from "styled-components";
 export const EmblemBottom = styled.div`
   margin-bottom: 80px;
   text-align: center;
-
 `;
+
+export const EmblemLink = styled.a`
+text-decoration: none;
+`
 
 export const EmblemLogo = styled.img`
   width: 157px;

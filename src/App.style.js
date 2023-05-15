@@ -6,4 +6,5 @@ export const TheMainWrapper = styled.div`
   padding: 0 20px;
   background-color: #1e1e1e;
   overflow: hidden;
+  color: white;
 `;

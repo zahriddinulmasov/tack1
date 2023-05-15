@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 
-export const Main = () => {
+export const Error = () => {
   const {t} = useTranslation()
   return (
     <>
-      <h1>{t("pages.main")}</h1>
+      <h1 style={{ color: "red"}}>{t("pages.error")}</h1>
     </>
   );
 };

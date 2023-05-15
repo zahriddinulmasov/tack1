@@ -1,12 +1,19 @@
 import EmblemCar from "../../assets/images/logo.png";
-import { EmblemBottom, EmblemLogo, EmblemText } from "./emblem.styled";
+import {
+  EmblemBottom,
+  EmblemLink,
+  EmblemLogo,
+  EmblemText,
+} from "./emblem.styled";
 
 export const Emblem = () => {
   return (
     <EmblemBottom>
-      <EmblemLogo src={EmblemCar} />
+      <EmblemLink href="#">
+        <EmblemLogo src={EmblemCar} />
 
-      <EmblemText>HONGQI</EmblemText>
+        <EmblemText>HONGQI</EmblemText>
+      </EmblemLink>
     </EmblemBottom>
   );
 };
